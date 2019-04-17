@@ -12,7 +12,7 @@ fi
 
 #working area
 
-cat $1 | while read -r line
+cat $1 | while read line
 do
   find $line -exec sha1sum {} \; | awk '{print $2" "$1}' | sed 's/ /, /' >> shacooked.txt
 done
