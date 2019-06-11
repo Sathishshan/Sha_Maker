@@ -5,7 +5,7 @@
 
 #argument check
 
-if [ -z $1 ]; then
+if [ $# -ne 1 ]; then
     echo "Need one argument to run the script e.g: $0 filename"
     exit
 fi
