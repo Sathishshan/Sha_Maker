@@ -11,8 +11,8 @@ if [ $# -ne 1 ]; then
 fi
 
 #working area
-
-cat $1 | while read line
+#sed is used to avoid the ^M control character at the END of the line.
+cat $1 | sed 's@\^M$@@g' | while read line
 do
   find $line -exec sha1sum {} \; | awk '{print $2" "$1}' | sed 's/ /, /' >> shacooked.txt
 done
