@@ -11,7 +11,7 @@ if [ $# -ne 1 ]; then
 fi
 
 #working area
-#sed is used to avoid the ^M control character at the END of the line.
+#here sed is used to avoid the ^M control character at the END of the line. ^M is equilatent to \r #carriage return.
 cat $1 | sed 's@\^M$@@g' | while read line
 do
   find $line -exec sha1sum {} \; | awk '{print $2" "$1}' | sed 's/ /, /' >> shacooked.txt
