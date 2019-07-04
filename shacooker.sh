@@ -16,4 +16,4 @@ cat $1 | sed 's@\^M$@@g' | while read line
 do
   find $line -exec sha1sum {} \; | awk '{print $2", "$1}'
 done > shacooked.txt
-echo "Sha value has been cooked, eat fast while it is Hot."
+echo "Sha value has been cooked."
