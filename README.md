@@ -1,6 +1,6 @@
 # shacooker
 
-USAGE: ./shacooker.sh filename.txt
+USAGE: ./sha_maker.sh filename.txt
 
 The file Must contain a valid path and path must contain to cook the sha1sum.
 
