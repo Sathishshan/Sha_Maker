@@ -1,4 +1,4 @@
-# shacooker
+# ShaMaker
 
 USAGE: ./sha_maker.sh filename.txt
 
